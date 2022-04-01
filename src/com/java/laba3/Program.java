@@ -25,7 +25,7 @@ public class Program extends JFrame {
             case "add":
             {
                 start = System.nanoTime();
-                for(int i=0; i<1000;i++)
+                for(int i=0; i<count;i++)
                 {
                     list.add(5);
                 }
@@ -35,7 +35,7 @@ public class Program extends JFrame {
             case "get":
             {
                 start = System.nanoTime();
-                for(int i=0; i<1000;i++)
+                for(int i=0; i<count;i++)
                 {
                     list.get(i);
                 }
@@ -45,7 +45,7 @@ public class Program extends JFrame {
             case "set":
             {
                 start = System.nanoTime();
-                for(int i=0; i<1000;i++)
+                for(int i=0; i<count;i++)
                 {
                     list.set(i, 0);
                 }
@@ -55,7 +55,7 @@ public class Program extends JFrame {
             case "remove":
             {
                 start = System.nanoTime();
-                for(int i=0; i<1000;i++)
+                for(int i=0; i<count;i++)
                 {
                     list.remove(0);
                 }
@@ -97,77 +97,8 @@ public class Program extends JFrame {
         //Тестируемые листы
         ArrayList<Integer> arrayList = new ArrayList<>();
         LinkedList<Integer> linkedList = new LinkedList<>();
-        /*
-        //Метод add для ArrayList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            arrayList.add(5);
-        }
-        finish = System.nanoTime();
-        data[0][1] = Long.toString(finish - start);
 
-
-        //Метод add для LinkedList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            linkedList.add(5);
-        }
-        finish = System.nanoTime();
-        data[0][2] = Long.toString(finish - start);
-
-        //Метод get для ArrayList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            arrayList.get(i);
-        }
-        finish = System.nanoTime();
-        data[1][1] = Long.toString(finish - start);
-        //Метод get для LinkedList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            linkedList.get(i);
-        }
-        finish = System.nanoTime();
-        data[1][2] = Long.toString(finish - start);
-
-        //Метод set для ArrayList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            arrayList.set(i, 0);
-        }
-        finish = System.nanoTime();
-        data[2][1] = Long.toString(finish - start);
-        //Метод set для LinkedList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            linkedList.set(i, 0);
-        }
-        finish = System.nanoTime();
-        data[2][2] = Long.toString(finish - start);
-
-        //Метод remove для ArrayList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            arrayList.remove(0);
-        }
-        finish = System.nanoTime();
-        data[3][1] = Long.toString(finish - start);
-        //Метод remove для LinkedList
-        start = System.nanoTime();
-        for(int i=0; i<1000;i++)
-        {
-            linkedList.remove(0);
-        }
-        finish = System.nanoTime();
-        data[3][2] = Long.toString(finish - start);
-        */
+        //Результаты тестов
         data[0][1] = testMethod(arrayList, 1000, "add");
         data[1][1] = testMethod(arrayList, 1000, "get");
         data[2][1] = testMethod(arrayList, 1000, "set");

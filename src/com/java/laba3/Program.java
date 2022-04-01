@@ -7,7 +7,8 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-// через интерфейс лист
+
+
 
 public class Program extends JFrame {
 
@@ -16,6 +17,7 @@ public class Program extends JFrame {
      * @param list - тестируемый лист
      * @param count - количество повторений (элементов)
      * @param method - название метода
+     * @return затраченное время
      * */
     public static String testMethod(List list, int count, String method)
     {
@@ -71,7 +73,7 @@ public class Program extends JFrame {
 
     /**
      * Стартовая точка
-     * @param args
+     * @param args -
      * */
     public static void main(String[] args) {
         JFrame frame = new JFrame("Сравнение методов");
@@ -116,4 +118,7 @@ public class Program extends JFrame {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
+
+
 }
